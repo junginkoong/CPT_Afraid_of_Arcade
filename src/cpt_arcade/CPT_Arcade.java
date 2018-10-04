@@ -244,30 +244,30 @@ public class CPT_Arcade {
         frame.dispatchEvent(new WindowEvent(frame ,WindowEvent.WINDOW_CLOSING));
         gamePoint += defence.gamePoint;
     }
-    public static void backgroundMusic() {
-        Mixer.Info[] mixInfos = AudioSystem.getMixerInfo();
-        mixer = AudioSystem.getMixer(mixInfos[0]);
-        DataLine.Info dataInfo = new DataLine.Info(Clip.class, null);
-        try {
-            clip = (Clip) mixer.getLine(dataInfo);
-        } catch (LineUnavailableException lue) {
-            lue.printStackTrace();
-        }
-        try {
-            URL soundURL = Main.class.getResource("/cpt_arcade/Piano.wav");
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundURL);
-            clip.open(audioStream);
-        } catch (LineUnavailableException lue) {
-            lue.printStackTrace();
-        } catch (UnsupportedAudioFileException uafe) {
-            uafe.printStackTrace();
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
-
-        clip.start();
-
-    }
+//    public static void backgroundMusic() {
+//        Mixer.Info[] mixInfos = AudioSystem.getMixerInfo();
+//        mixer = AudioSystem.getMixer(mixInfos[0]);
+//        DataLine.Info dataInfo = new DataLine.Info(Clip.class, null);
+//        try {
+//            clip = (Clip) mixer.getLine(dataInfo);
+//        } catch (LineUnavailableException lue) {
+//            lue.printStackTrace();
+//        }
+//        try {
+//            URL soundURL = Main.class.getResource("/cpt_arcade/Piano.wav");
+//            AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundURL);
+//            clip.open(audioStream);
+//        } catch (LineUnavailableException lue) {
+//            lue.printStackTrace();
+//        } catch (UnsupportedAudioFileException uafe) {
+//            uafe.printStackTrace();
+//        } catch (IOException ioe) {
+//            ioe.printStackTrace();
+//        }
+//
+//        clip.start();
+//
+//    }
 
 }
 
